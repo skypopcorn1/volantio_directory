@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Volantio Employees</title>
+		</head>
+		<body>
+			<h1>Welcome to Volantio</h1>
+			{% for person in people %}
+				<p> {{ person.name }} </p>
+				<p> {{ person.title }} </p>
+				<p> {{ person.email }} </p>		
+				<p> {{ person.phone }} </p>	
+				<img src=" {{ person.image}} "/>		
+			{% endfor %}
+		</body>
+	</html>
