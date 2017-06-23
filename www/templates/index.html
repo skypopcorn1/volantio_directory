@@ -1,24 +1,16 @@
-{% load staticfiles %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-	<html>
-		<head>
-			<title>Volantio Employees</title>
-			<link rel="stylesheet" type="text/css" href="{% static 'normalise.css' '%}"/>
-			<link rel="stylesheet" type="text/css" href="{% static 'main.css' '%}"/>
-		</head>
-		<body>
-			<main>
-			<h1>Welcome to Volantio</h1>
-				{% for person in people %}
-				<section>
-					<img src=" {{ person.image}} "/>		
-					<h2> {{ person.name }} </h2>
-					<p class="person-title"> {{ person.title }} </p>
-					<p class="person-email"> {{ person.email }} </p>		
-					<p class="person-phone"> {{ person.phone }} </p>	
-				</section>
-				{% endfor %}
-			</main>
-		</body>
-	</html>
+{% block content %}
+<main>
+<h1>Welcome to Volantio</h1>
+	{% for person in people %}
+	<section>
+		<a href="{% url 'team_member_detail' person.slug%}"> <img src=" {{ person.image}} "/></a>	
+		<h2> {{ person.name }} </h2>
+		<p class="person-title"> {{ person.title }} </p>
+		<p class="person-email"> {{ person.email }} </p>		
+		<p class="person-phone"> {{ person.phone }} </p>	
+	</section>
+	{% endfor %}
+</main>
+{% endblock %}

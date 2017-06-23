@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+			<main>
+			<h1>Welcome to Volantio</h1>
+				<section>
+					<img src=" {{ person.image}} "/>		
+					<h2> {{ person.name }} </h2>
+					<p class="person-title"> {{ person.title }} </p>
+					<p class="person-email"> {{ person.email }} </p>		
+					<p class="person-phone"> {{ person.phone }} </p>	
+					<p > {{ person.birthday }} </p>
+					<p > {{ person.gitbhub }} </p>
+					<p > {{ person.hobbies }} </p>
+				</section>
+			</main>
+{% endblock %}
