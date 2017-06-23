@@ -25,7 +25,7 @@ SECRET_KEY = 'x=0j1+)sz_188os^rwb*n7+%8bgvj5l4j%^pn36=&&ipd$@xvs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['rocky-plains-93006.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'rocky-plains-93006.herokuapp.com']
 
 
 # Application definition
